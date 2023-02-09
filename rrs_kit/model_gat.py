@@ -30,8 +30,6 @@ class GAT(nn.Module):
     :param gru_hid_dim: hidden dimension in the GRU layer
     :param forecast_n_layers: number of layers in the FC-based Forecasting Model
     :param forecast_hid_dim: hidden dimension in the FC-based Forecasting Model
-    :param recon_n_layers: number of layers in the GRU-based Reconstruction Model
-    :param recon_hid_dim: hidden dimension in the GRU-based Reconstruction Model
     :param dropout: dropout rate
     :param alpha: negative slope used in the leaky rely activation function
 
