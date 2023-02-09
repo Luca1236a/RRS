@@ -11,12 +11,11 @@ from modules import (
     TemporalAttentionLayer,
     GRULayer,
     Forecasting_Model,
-    ReconstructionModel,
 )
 
 
-class MTAD_GAT(nn.Module):
-    """ MTAD-GAT model class.
+class GAT(nn.Module):
+    """ GAT model class.
 
     :param n_features: Number of input features
     :param window_size: Length of the input sequence
@@ -54,7 +53,7 @@ class MTAD_GAT(nn.Module):
         dropout=0.2,
         alpha=0.2
     ):
-        super(MTAD_GAT, self).__init__()
+        super(GAT, self).__init__()
 
         self.conv = ConvLayer(n_features, kernel_size)
         self.feature_gat = FeatureAttentionLayer(n_features, window_size, dropout, alpha, feat_gat_embed_dim, use_gatv2)
